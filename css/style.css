@@ -1,0 +1,127 @@
+@font-face{
+    font-family: nfi;
+    src: url(../font/csnpwdt\ NFI.ttf);
+}
+
+body{
+    font-family: nfi;
+}
+#bg{
+    width: 750px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    background: #0f2439;
+    overflow: hidden;
+    z-index: -3;
+}
+.moon{
+    position: absolute;
+    left: 180px;
+    top: -50px;
+}
+.cd1, .cd2, .cd3, .cd4, .cd5{
+    position: absolute;
+}
+.cd1{
+    left: 10px;
+    top: 30px;
+}
+.cd2{
+    left: 80px;
+    top: 150px;
+}
+.cd3{
+    right: 100px;
+    top: 40px;
+}
+.cd4{
+    right: -60px;
+    top: 80px;
+}
+.cd5{
+    right: 30px;
+    top: 160px;
+}
+.ground{
+    position: absolute;
+    bottom: -190px;
+    left: -100px;
+    z-index: -1;
+    text-shadow: 5px -5px 2px #f7b822;
+}
+.text{
+    font-size: 80px;
+    color: #f7b822;
+    font-weight: 200;
+    position: absolute;
+    bottom: -40px;
+    left: 190px;
+    letter-spacing: 4px;
+    animation-name: halloween;
+    animation-duration: 5s;
+}
+@keyframes halloween{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.witch{
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 250px;
+    animation-name: witch;
+    animation-duration: 12s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes witch{
+    0%{
+        left: 0;
+        top: 250px;
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    47%{
+        left: 650px;
+        top: 0;
+        opacity: 0;
+    }
+    48%{
+        transform: scaleX(1);
+    }
+    49%{
+        opacity: 0;
+        left: 650px;
+        top: 250px;
+    }
+    50%{
+        opacity: 1;
+        transform: scaleX(-1);
+    }
+    75%{
+        opacity: 1;
+    }
+    98%{
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transform: scaleX(-1);
+    }
+    99%{
+        opacity: 0;
+        left: 0;
+        top: 250px;
+        transform: scaleX(1);
+    }
+    100%{
+        opacity: 1;
+    }
+}
